@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASC - Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- HEADER -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <div class="user-avatar">JS</div>
+                <div class="header-info">
+                    <h1>Olá, gerente!</h1>
+                    <p class="company-info">ID: <span id="companyId">54546565</span> Alimentar Triângulo Mineiro</p>
+                </div>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="pesquisa" id="searchInput">
+                <button class="search-btn">🔍</button>
+            </div>
+
+            <div class="header-right">
+                <button class="header-icon notification-icon" onclick="toggleNotifications()">
+                    🔔
+                    <span class="notification-badge">3</span>
+                </button>
+                <button class="header-icon settings-icon" onclick="navigateTo('settings.html')">⚙️</button>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <div class="dashboard-content">
+            <!-- SIDEBAR ESQUERDA -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-icon">💬</span>
+                            <span class="stat-label">Total de feedbacks</span>
+                        </div>
+                        <div class="stat-number">367</div>
+                        <div class="stat-change positive">12% em relação ao mês anterior</div>
+                        <div class="stat-divider"></div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-icon">✅</span>
+                            <span class="stat-label">Resolvidos</span>
+                        </div>
+                        <div class="stat-number">34</div>
+                        <div class="stat-change negative">05% em relação ao mês anterior</div>
+                        <div class="stat-divider"></div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-icon">⏳</span>
+                            <span class="stat-label">Pendentes</span>
+                        </div>
+                        <div class="stat-number">78</div>
+                        <div class="stat-change negative">6.5% em relação ao mês anterior</div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- CONTEÚDO PRINCIPAL -->
+            <main class="main-content">
+                <!-- GRID DE CARDS -->
+                <section class="cards-grid">
+                    <div class="menu-card" onclick="navigateTo('setores.html')">
+                        <div class="card-icon">🏢</div>
+                        <h3>Setores</h3>
+                    </div>
+
+                    <div class="menu-card" onclick="navigateTo('relatorio.html')">
+                        <div class="card-icon">📋</div>
+                        <h3>Relatório</h3>
+                    </div>
+
+                    <div class="menu-card" onclick="navigateTo('produtos.html')">
+                        <div class="card-icon">📦</div>
+                        <h3>Produtos</h3>
+                    </div>
+
+                    <div class="menu-card" onclick="navigateTo('respondentes.html')">
+                        <div class="card-icon">👥</div>
+                        <h3>Respondentes</h3>
+                    </div>
+                </section>
+
+                <!-- FEEDBACKS RECENTES -->
+                <section class="feedbacks-section">
+                    <h2>Feedbacks Recentes</h2>
+                    
+                    <div class="feedback-item">
+                        <div class="feedback-content">
+                            <h4>Marcela fernandes</h4>
+                            <p>O fardo de leite condensado veio com alguns com ...</p>
+                        </div>
+                        <span class="feedback-tag qualidade">QUALIDADE</span>
+                    </div>
+
+                    <div class="feedback-item">
+                        <div class="feedback-content">
+                            <h4>Soso Careca</h4>
+                            <p>O doce de leite é muito doce e muito líquido .....</p>
+                        </div>
+                        <span class="feedback-tag comercial">COMERCIAL</span>
+                    </div>
+
+                    <div class="feedback-item">
+                        <div class="feedback-content">
+                            <h4>Kaio ferreira</h4>
+                            <p>Tive um excelente atendimento, e eficaz na hora...</p>
+                        </div>
+                        <span class="feedback-tag atendimento">ATENDIMENTO</span>
+                    </div>
+
+                    <div class="feedback-item">
+                        <div class="feedback-content">
+                            <h4>Antonella Braga</h4>
+                            <p>O doce de goiabada não é tão doce quando meu ...</p>
+                        </div>
+                        <span class="feedback-tag retirada">RETIRADA</span>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- MODAL DE NOTIFICAÇÕES -->
+    <div class="notifications-modal" id="notificationsModal">
+        <div class="notifications-content">
+            <h3>Notificações</h3>
+            <div class="notification-item">
+                <p>Novo feedback recebido de Marcela fernandes</p>
+                <span class="time">Há 5 minutos</span>
+            </div>
+            <div class="notification-item">
+                <p>Feedback de Soso Careca foi respondido</p>
+                <span class="time">Há 1 hora</span>
+            </div>
+            <div class="notification-item">
+                <p>Novo respondente adicionado</p>
+                <span class="time">Há 2 horas</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>
