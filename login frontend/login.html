@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASC - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="login-body">
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">
+                <h1 class="sasc-logo">SASC<span>™</span></h1>
+            </div>
+            
+            <form id="login-form">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="email" placeholder="email" required id="email">
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-home"></i>
+                    <input type="text" placeholder="id da empresa" required id="company-id">
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="senha" required id="password">
+                    <i class="fas fa-eye-slash toggle-password"></i>
+                </div>
+                
+                <div class="forgot-password">
+                    <a href="#">ESQUECEU SUA SENHA?</a>
+                </div>
+                
+                <button type="submit" class="btn-login">ENTRAR</button>
+            </form>
+            
+            <p class="login-footer">acesse sua conta para gerenciar os dados de satisfação</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

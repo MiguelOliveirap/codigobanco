@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Gerente</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="user-info" id="profile-btn" title="Ver Perfil">
+                <div class="avatar">JS</div>
+                <h1>Olá, gerente!</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="pesquisa" id="search-input">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-icons">
+                <div class="notification">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">1</span>
+                </div>
+                <i class="fas fa-cog" id="settings-btn" title="Configurações"></i>
+            </div>
+        </header>
+
+        <main class="content">
+            <!-- Sidebar Stats -->
+            <aside class="sidebar">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <i class="fas fa-comment-dots blue-icon"></i>
+                        <span>Total de feedbacks</span>
+                    </div>
+                    <h2>367</h2>
+                    <p class="growth positive">12% em relação ao mês anterior</p>
+                    <div class="chart-line blue-line"></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <i class="fas fa-check-circle green-icon"></i>
+                        <span>Resolvidos</span>
+                    </div>
+                    <h2>34</h2>
+                    <p class="growth positive">05% em relação ao mês anterior</p>
+                    <div class="chart-line green-line"></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <i class="fas fa-clock orange-icon"></i>
+                        <span>Pendentes</span>
+                    </div>
+                    <h2>78</h2>
+                    <p class="growth negative">6,5% em relação ao mês anterior</p>
+                    <div class="chart-line orange-line"></div>
+                </div>
+            </aside>
+
+            <!-- Main Dashboard Area -->
+            <section class="main-area">
+                <div class="grid-menu">
+                    <div class="menu-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Analise</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fas fa-th-large"></i>
+                        <span>Setores</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span>Relatorio</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fas fa-box"></i>
+                        <span>Produtos</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Dados</span>
+                    </div>
+                    <div class="menu-item">
+                        <i class="fas fa-users"></i>
+                        <span>Respondentes</span>
+                    </div>
+                </div>
+
+                <div class="recent-feedbacks">
+                    <h3>Feedbacks Recentes</h3>
+                    <div class="feedback-list">
+                        <div class="feedback-item">
+                            <div class="feedback-info">
+                                <strong>Marcela fernandes</strong>
+                                <p>O fardo de leite condensado veio com alguns com furinhos, tive que retirar da embalagem.</p>
+                            </div>
+                            <span class="tag qualidade">QUALIDADE</span>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="feedback-info">
+                                <strong>Soso Careca</strong>
+                                <p>O doce de leite é muito doce e muito líquido...</p>
+                            </div>
+                            <span class="tag comercial">COMERCIAL</span>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="feedback-info">
+                                <strong>Kaio ferreira</strong>
+                                <p>tive um excelente atendimento, e eficaz na hora...</p>
+                            </div>
+                            <span class="tag atendimento">ATENDIMENTO</span>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="feedback-info">
+                                <strong>Marcela fernandes</strong>
+                                <p>Solicitação de troca de produto devido a avaria no transporte.</p>
+                            </div>
+                            <span class="tag retirada">RETIRADA</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Modais para as páginas solicitadas -->
+        <div id="modal-container" class="modal-overlay hidden">
+            <div class="modal-content">
+                <button class="close-modal" id="close-modal">&times;</button>
+                <div id="modal-body">
+                    <!-- Conteúdo dinâmico será inserido aqui pelo JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
